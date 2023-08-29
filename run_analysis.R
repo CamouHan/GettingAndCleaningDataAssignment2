@@ -64,7 +64,20 @@ overall2 <- subset(overall,mean_sd == TRUE) ## Burası da farklı
 activitynames <- merge(overall2,activityLabels,by="activity_id",all.x=TRUE)
 
 ## STEP4:Appropriately labels the data set with descriptive variable names.
-## We have done this step in the previous steps
+
+names(overall2)[2] = "activity"
+names(overall2)<-gsub("Acc", "Accelerometer", names(overall2))
+names(overall2)<-gsub("Gyro", "Gyroscope", names(overall2))
+names(overall2)<-gsub("BodyBody", "Body", names(overall2))
+names(overall2)<-gsub("Mag", "Magnitude", names(overall2))
+names(overall2)<-gsub("^t", "Time", names(overall2))
+names(overall2)<-gsub("^f", "Frequency", names(overall2))
+names(overall2)<-gsub("tBody", "TimeBody", names(overall2))
+names(overall2)<-gsub("-mean()", "Mean", names(overall2), ignore.case = TRUE)
+names(overall2)<-gsub("-std()", "STD", names(overall2), ignore.case = TRUE)
+names(overall2)<-gsub("-freq()", "Frequency", names(overall2), ignore.case = TRUE)
+names(overall2)<-gsub("angle", "Angle", names(overall2))
+names(overall2)<-gsub("gravity", "Gravity", names(overall2))
 
 ## STEP5:From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
