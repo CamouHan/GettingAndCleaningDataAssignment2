@@ -37,6 +37,13 @@ Entire numbers in code column of the ```overall2``` data replaced with correspon
 
 ## 6:Appropriately labels the data set with descriptive variable names
 
+* code column in ```overall2``` renamed into activities
+* All Acc in column’s name replaced by Accelerometer
+* All Gyro in column’s name replaced by Gyroscope
+*  All BodyBody in column’s name replaced by Body
+*  All Mag in column’s name replaced by Magnitude
+* All start with character f in column’s name replaced by Frequency
+* All start with character t in column’s name replaced by Time
 
 ## 7:From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
